@@ -6,15 +6,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  tarefa = "";
-  tarefas : Array<String> = [];
+  tarefa = ""; //variavel para o input
+  tarefas : Array<String> = []; // array onde serão adicionados os itens 
 
-  addTarefa() {
+  addTarefa() { // função para adiconar a tarefa no arry
     this.tarefas.push(this.tarefa);
     this.tarefa = "";
   }
 
-  rmvTarefa(tarefa) {
+  rmvTarefa(tarefa) { // função para remover itens da lista
     this.tarefas.splice( this.tarefas.indexOf(tarefa), 1);
   }
 }

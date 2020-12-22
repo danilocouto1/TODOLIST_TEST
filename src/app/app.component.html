@@ -1,25 +1,27 @@
-<div class="container">
-  <div class="header">
-    <h1>
-      TC Card
-    </h1>    
-    <h2>
-      Lista de Tarefas:
-    </h2>
+<div class="main">
+  <div class="container"> <!--Container do CSS-->
+    <div class="header">
+      <h1>
+        TC Card
+      </h1>    
+      <h2>
+        Lista de Tarefas:
+      </h2>
+    </div>
+  
+  
+    <div class="form-group"> <!--Form do CSS-->
+      <input type="text" [(ngModel)]="tarefa" placeholder="Digite a tarefa aqui..." class="form-control"> <!--Input dos itens-->
+    </div>
+    <br>
+    <button (click)="addTarefa()" class="btn btn-primary">ADD</button> <!--Botão de adicionar itens-->
+    <hr>
+  
+    <ul class="list-group"> <!--List do CSS-->
+      <li *ngFor="let item of tarefas" class="list-group-item">
+        {{item}} <!--Itens que serão renderizados apos adicionados-->
+        <button (click)="rmvTarefa(tarefa)" class="btn btn-danger">X</button> <!--Botão de remover itens-->
+      </li>
+    </ul>
   </div>
-
-
-  <div class="form-group">
-    <input type="text" [(ngModel)]="tarefa" placeholder="Digite a tarefa aqui..." class="form-control">
-  </div>
-  <br>
-  <button (click)="addTarefa()" class="btn btn-primary">ADD</button>
-  <hr>
-
-  <ul class="list-group">
-    <li *ngFor="let item of tarefas" class="list-group-item">
-      {{item}}
-      <button (click)="rmvTarefa(tarefa)" class="btn btn-danger">X</button>
-    </li>
-  </ul>
 </div>
