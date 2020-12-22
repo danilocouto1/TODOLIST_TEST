@@ -120,5 +120,8 @@
       }
     }
   },
-  "defaultProject": "TO-DO"
+  "defaultProject": "TO-DO",
+  "cli": {
+    "analytics": "b84c01a1-3ecf-4272-a7be-3f8c992cb41a"
+  }
 }

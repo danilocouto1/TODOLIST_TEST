@@ -1,1 +1,25 @@
-<app-todo-list></app-todo-list>
+<div class="container">
+  <div class="header">
+    <h1>
+      TC Card
+    </h1>    
+    <h2>
+      Lista de Tarefas:
+    </h2>
+  </div>
+
+
+  <div class="form-group">
+    <input type="text" [(ngModel)]="tarefa" placeholder="Digite a tarefa aqui..." class="form-control">
+  </div>
+  <br>
+  <button (click)="addTarefa()" class="btn btn-primary">ADD</button>
+  <hr>
+
+  <ul class="list-group">
+    <li *ngFor="let item of tarefas" class="list-group-item">
+      {{item}}
+      <button (click)="rmvTarefa(tarefa)" class="btn btn-danger">X</button>
+    </li>
+  </ul>
+</div>
